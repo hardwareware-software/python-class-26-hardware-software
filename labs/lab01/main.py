@@ -7,13 +7,18 @@ print("10 + 55 =", 10 + 55)
 print("2 x 3 x 10 =", 2 * 3 * 10)
 
 # create a variable 
-firstName = "Dominic"
-lastName = "Dongell"
-print(firstName, lastName)
-major = "Engineering"
+firstName = "Dominic,"
+lastName = "Dongell."
+print("My name is", firstName, lastName)
+major = "Engineering."
 print("My major is", major)
 
 
  # ask the user a question
-yourName = input("what is your first Name?")
-print("My name is", firstName, lastName)
+num1 = 72
+num2 = 127
+print("You entered 72.")
+print("You entered 127.")
+print("72 * 127 =", 72 * 127)
+myDog = "Scout."
+print("My dogs name is", myDog) 
