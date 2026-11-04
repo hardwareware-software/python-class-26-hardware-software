@@ -17,7 +17,7 @@ def main():
 
     # menu system
     while True:
-        print(" * * MENU * *")
+        print("* * MENU * *")
         print("1- Say Hello")
         print("2 - Output Full Name")
         print("3 - Output Last Name, First Name")
@@ -48,4 +48,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-        
+    

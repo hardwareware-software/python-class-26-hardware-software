@@ -18,8 +18,4 @@ def lastNameFirst(firstName, lastName):
     print(f"{lastName}, {firstName}")
     print()
 
-def documentation():
-    help(sayHello)
-    help(fullName)
-    help(lastNameFirst)
-    
+
