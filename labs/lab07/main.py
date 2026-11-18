@@ -6,10 +6,26 @@ import csv
 # create a filename for our csv file
 filename = "trips.csv"
 
-def write_trips(trips):
+def write_trips(trip):
     with open(filename, "a", newline="") as file:
         writer = csv.writer(file)
-        writer.writerows(trips)
+        writer.writerow(trip)
+
+def read_trips():
+    trips = []
+    with open(filename, newline="")as file:
+        reader = csv.reader(file)
+        for row in reader:
+            trips.append(row)
+    return trips
+
+
+def list_trips(trips):
+    print("Distance\tGallons\t\tmpg")
+    for i in range(0, len(trips)):
+        trip = trips[i]
+        print(str(trip[0]) + "\t\t" + str(trip[1]) + "\t\t" + str(trip[2]))
+        print()
 
 def get_miles_driven():
     while (miles_driven := float(input("Enter miles driven:\t"))) <= 0:                    
@@ -28,6 +44,9 @@ def main():
     # create placeholder list
     trips = []
 
+    trips = read_trips()
+    list_trips(trips)
+
     more = "y"
     while more.lower() == "y":
         miles_driven = get_miles_driven()
@@ -45,7 +64,11 @@ def main():
         trip.append(mpg)
         # now append this entire row to my trips list
         trips.append(trip)
-        print(trips)
+        # be sure to write this data
+        write_trips(trip)
+
+        list_trips(trips)
+        
         
         more = input("More entries? (y or n): ")
 
